@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "runapi-volcengine-lip-sync"
+version = "0.1.1"
+description = "RunAPI Volcengine Lip Sync SDK for audio-driven video-to-video lip sync workflows in JavaScript, Python, Ruby, Go, Java, and PHP"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+authors = [{ name = "RunAPI", email = "contact@runapi.ai" }]
+keywords = ["runapi", "runapi-ai", "volcengine", "lip-sync", "api", "sdk", "typescript", "python", "ruby", "golang", "java", "maven", "gradle", "video-generation", "video-api", "lip-sync-api"]
+dependencies = ["runapi-core>=0.1.4"]
+
+[project.urls]
+Homepage = "https://runapi.ai/models/volcengine-lip-sync"
+Documentation = "https://runapi.ai/docs#sdk-volcengine-lip-sync"
+Source = "https://github.com/runapi-ai/volcengine-lip-sync-sdk"
+Issues = "https://github.com/runapi-ai/volcengine-lip-sync-sdk/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/runapi"]
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.runapi]
+slug = "volcengine-lip-sync"
