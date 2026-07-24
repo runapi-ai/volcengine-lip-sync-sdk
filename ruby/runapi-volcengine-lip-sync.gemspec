@@ -24,6 +24,6 @@ Dir.chdir(__dir__) do
     spec.extra_rdoc_files = ["README.md"]
         spec.require_paths = ["lib"]
 
-    spec.add_dependency "runapi-core", "~> 0.2.11"
+    spec.add_dependency "runapi-core", "~> 0.2.16"
   end
 end
