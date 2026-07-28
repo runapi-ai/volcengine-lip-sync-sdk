@@ -1,6 +1,8 @@
 // Package volcenginelipsync provides the Volcengine Lip Sync API client.
 package volcenginelipsync
 
+import "github.com/runapi-ai/core-sdk/go/core"
+
 // TaskStatus is the async task lifecycle state (e.g. "processing", "completed", "failed").
 type TaskStatus string
 
@@ -20,6 +22,7 @@ type LipSyncVideoParams struct {
 
 // AsyncTaskResponse carries the task ID, lifecycle status, and error.
 type AsyncTaskResponse struct {
+	core.TaskBillingFacts
 	ID     string     `json:"id"`
 	Status TaskStatus `json:"status"`
 	Error  string     `json:"error,omitempty"`

@@ -1,4 +1,4 @@
-import type { AsyncTaskStatus } from '@runapi.ai/core';
+import type { AsyncTaskStatus, TaskBillingResponse, TaskResponse } from '@runapi.ai/core';
 
 export type LipSyncMode = 'lite' | 'basic' | (string & {});
 
@@ -27,7 +27,7 @@ export interface LipSyncVideoParams {
 }
 
 /** Initial response when a lip-sync video task is created. */
-export interface TaskCreateResponse {
+export interface TaskCreateResponse extends TaskBillingResponse {
   id: string;
   status?: AsyncTaskStatus;
 }
@@ -38,7 +38,7 @@ export interface Video {
 }
 
 /** Task status response for a lip-sync video operation. */
-export interface LipSyncVideoResponse {
+export interface LipSyncVideoResponse extends TaskResponse {
   id: string;
   status: AsyncTaskStatus;
   /** Generated lip-sync video, populated when the task completes. */
