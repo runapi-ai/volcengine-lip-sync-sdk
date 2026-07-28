@@ -128,8 +128,8 @@ Volcengine Lip Sync is asynchronous. `create()` submits a task and returns its i
 ## Public Links
 
 - Model page: https://runapi.ai/models/volcengine-lip-sync
-- SDK docs: https://runapi.ai/docs#sdk-volcengine-lip-sync
-- Product docs: https://runapi.ai/docs#volcengine-lip-sync
+- SDK docs: https://runapi.ai/docs/resources/sdks
+- Product docs: https://runapi.ai/docs/api/volcengine-lip-sync/lip-sync-video
 - SDK repository: https://github.com/runapi-ai/volcengine-lip-sync-sdk
 - PHP package repository: https://github.com/runapi-ai/volcengine-lip-sync-php
 - Skill repository: https://github.com/runapi-ai/volcengine-lip-sync

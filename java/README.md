@@ -30,8 +30,8 @@ Use `create`, `get`, and `run` for async workflows. Keep `RUNAPI_API_KEY` in the
 ## Links
 
 - Model page: https://runapi.ai/models/volcengine-lip-sync
-- SDK docs: https://runapi.ai/docs#sdk-volcengine-lip-sync
-- Product docs: https://runapi.ai/docs#volcengine-lip-sync
+- SDK docs: https://runapi.ai/docs/resources/sdks
+- Product docs: https://runapi.ai/docs/api/volcengine-lip-sync/lip-sync-video
 - Pricing and rate limits: https://runapi.ai/models/volcengine-lip-sync
 - Repository: https://github.com/runapi-ai/volcengine-lip-sync-sdk
 

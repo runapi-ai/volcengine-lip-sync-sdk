@@ -2,7 +2,7 @@
 
 The Volcengine Lip Sync JavaScript SDK is the language-specific package for Volcengine Lip Sync on RunAPI. Use this package when your application needs typed request bodies, task status lookup, and consistent RunAPI errors in JavaScript.
 
-This README is the JavaScript package guide inside the public `volcengine-lip-sync-sdk` repository. For model details, use https://runapi.ai/models/volcengine-lip-sync; for API reference, use https://runapi.ai/docs#volcengine-lip-sync; for SDK docs, use https://runapi.ai/docs#sdk-volcengine-lip-sync.
+This README is the JavaScript package guide inside the public `volcengine-lip-sync-sdk` repository. For model details, use https://runapi.ai/models/volcengine-lip-sync; for API reference, use https://runapi.ai/docs/api/volcengine-lip-sync/lip-sync-video; for SDK docs, use https://runapi.ai/docs/resources/sdks.
 
 ## Install
 
@@ -32,8 +32,8 @@ RunAPI-generated file URLs are temporary. Download and store generated images, v
 ## Links
 
 - Model page: https://runapi.ai/models/volcengine-lip-sync
-- SDK docs: https://runapi.ai/docs#sdk-volcengine-lip-sync
-- Product docs: https://runapi.ai/docs#volcengine-lip-sync
+- SDK docs: https://runapi.ai/docs/resources/sdks
+- Product docs: https://runapi.ai/docs/api/volcengine-lip-sync/lip-sync-video
 - Pricing and rate limits: https://runapi.ai/models/volcengine-lip-sync
 - Provider comparison: https://runapi.ai/providers/bytedance
 - Repository: https://github.com/runapi-ai/volcengine-lip-sync-sdk
