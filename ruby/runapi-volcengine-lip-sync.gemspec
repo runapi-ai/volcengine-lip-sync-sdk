@@ -4,7 +4,7 @@ Dir.chdir(__dir__) do
 
   Gem::Specification.new do |spec|
     spec.name = "runapi-volcengine-lip-sync"
-    spec.version = "0.1.3"
+    spec.version = "0.1.4"
     spec.authors = ["RunAPI"]
     spec.email = ["contact@runapi.ai"]
 
@@ -24,6 +24,6 @@ Dir.chdir(__dir__) do
     spec.extra_rdoc_files = ["README.md"]
         spec.require_paths = ["lib"]
 
-    spec.add_dependency "runapi-core", "~> 0.4.0"
+    spec.add_dependency "runapi-core", "~> 0.5.0"
   end
 end
