@@ -40,8 +40,7 @@ func TestLipSyncVideoCreate(t *testing.T) {
 		EnableVocalSeparation: &enableVocalSeparation,
 		AlignAudio:            &alignAudio,
 		AlignAudioReverse:     &alignAudioReverse,
-		TemplateStartSeconds:  &templateStartSeconds,
-	})
+		TemplateStartSeconds:  &templateStartSeconds})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -67,7 +66,7 @@ func TestLipSyncVideoCreate(t *testing.T) {
 }
 
 func TestLipSyncVideoGet(t *testing.T) {
-	stub := &stubHTTPClient{response: json.RawMessage(`{"id":"task_volcengine_456","status":"completed","videos":[{"url":"https://cdn.runapi.ai/public/samples/volcengine-lip-sync-result-adam.mp4"}]}`)}
+	stub := &stubHTTPClient{response: json.RawMessage(`{"id":"task_volcengine_456","status":"completed", "usage": {"cost": 0.05},"videos":[{"url":"https://cdn.runapi.ai/public/samples/volcengine-lip-sync-result-adam.mp4"}]}`)}
 	client := NewClientWithHTTP(stub)
 	resp, err := client.LipSyncVideo.Get(context.Background(), "task_volcengine_456")
 	if err != nil {

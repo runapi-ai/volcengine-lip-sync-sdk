@@ -3,7 +3,7 @@
   "runapi": {
     "slug": "volcengine-lip-sync"
   },
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "RunAPI Volcengine Lip Sync SDK for audio-driven video-to-video lip sync workflows in JavaScript, Python, Ruby, Go, Java, and PHP",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -30,7 +30,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@runapi.ai/core": "^0.4.2"
+    "@runapi.ai/core": "^0.4.3"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

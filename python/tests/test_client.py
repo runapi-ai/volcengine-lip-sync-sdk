@@ -78,10 +78,8 @@ def test_create_posts_compacted_body():
                 "mode": "lite",
                 "source_video_url": "https://cdn.runapi.ai/public/samples/volcengine-lip-sync-source.mp4",
                 "source_audio_url": "https://cdn.runapi.ai/public/samples/volcengine-lip-sync-voice-adam.mp3",
-                "enable_vocal_separation": False,
-            },
-        ),
-    ]
+                "enable_vocal_separation": False},
+        )]
     assert isinstance(result, LipSyncVideoResponse)
     assert result.id == "t1"
 
@@ -98,9 +96,8 @@ def test_run_polls_and_narrows_completed_type():
         {"id": "t1", "status": "pending"},
         {
             "id": "t1",
-            "status": "completed",
-            "videos": [{"url": "https://cdn.runapi.ai/public/samples/volcengine-lip-sync-result-adam.mp4"}],
-        },
+            "status": "completed", "usage": {"cost": 0.05},
+            "videos": [{"url": "https://cdn.runapi.ai/public/samples/volcengine-lip-sync-result-adam.mp4"}]},
     )
     client = VolcengineLipSyncClient(api_key="k", http_client=fake)
     result = client.lip_sync_video.run(
