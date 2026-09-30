@@ -55,9 +55,6 @@ type LipSyncVideo struct{ http core.HTTPClient }
 func (r *LipSyncVideo) Create(ctx context.Context, params LipSyncVideoParams, opts ...option.RequestOption) (*core.TaskCreateResponse, error) {
 	requestOptions, _ := option.ResolveRequestOptions(opts...)
 	body := core.CompactParams(params)
-	if err := core.ValidateParams(contractSchema["lip-sync-video"], body); err != nil {
-		return nil, err
-	}
 	return core.PostJSON[core.TaskCreateResponse](ctx, r.http, lipSyncVideoPath, body, requestOptions)
 }
 

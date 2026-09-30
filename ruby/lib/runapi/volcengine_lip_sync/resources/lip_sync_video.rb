@@ -30,7 +30,6 @@ module RunApi
         # @return [RunApi::VolcengineLipSync::Types::LipSyncVideoResponse] task creation result with id
         def create(options: nil, **params)
           params = compact_params(params)
-          validate_contract!(CONTRACT["lip-sync-video"], params)
           request(:post, ENDPOINT, body: params, options: options)
         end
 

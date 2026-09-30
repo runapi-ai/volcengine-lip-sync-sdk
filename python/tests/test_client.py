@@ -1,7 +1,7 @@
 import pytest
 
 from runapi.core import config
-from runapi.core.errors import AuthenticationError, ValidationError
+from runapi.core.errors import AuthenticationError
 from runapi.volcengine_lip_sync import VolcengineLipSyncClient
 from runapi.volcengine_lip_sync.resources.lip_sync_video import LipSyncVideo
 from runapi.volcengine_lip_sync.types import CompletedLipSyncVideoResponse, LipSyncVideoResponse
@@ -110,23 +110,3 @@ def test_run_polls_and_narrows_completed_type():
     assert isinstance(result, CompletedLipSyncVideoResponse)
     assert result.videos[0].url == "https://cdn.runapi.ai/public/samples/volcengine-lip-sync-result-adam.mp4"
     assert [call[0] for call in fake.calls] == ["post", "get"]
-
-
-def test_create_requires_model():
-    client = VolcengineLipSyncClient(api_key="k", http_client=FakeHttp())
-    with pytest.raises(ValidationError, match="model must be one of: volcengine-lip-sync"):
-        client.lip_sync_video.create(
-            mode="lite",
-            source_video_url="https://cdn.runapi.ai/public/samples/volcengine-lip-sync-source.mp4",
-            source_audio_url="https://cdn.runapi.ai/public/samples/volcengine-lip-sync-voice-adam.mp3",
-        )
-
-
-def test_create_requires_source_audio_url():
-    client = VolcengineLipSyncClient(api_key="k", http_client=FakeHttp())
-    with pytest.raises(ValidationError, match="source_audio_url is required"):
-        client.lip_sync_video.create(
-            model="volcengine-lip-sync",
-            mode="lite",
-            source_video_url="https://cdn.runapi.ai/public/samples/volcengine-lip-sync-source.mp4",
-        )

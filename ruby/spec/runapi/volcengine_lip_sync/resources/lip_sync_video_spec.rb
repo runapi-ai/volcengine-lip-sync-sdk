@@ -27,12 +27,6 @@ RSpec.describe RunApi::VolcengineLipSync::Resources::LipSyncVideo do
       expect(result).to be_a(RunApi::VolcengineLipSync::Types::LipSyncVideoResponse)
       expect(result.id).to eq("task-1")
     end
-
-    it "raises ValidationError when model is invalid" do
-      expect do
-        resource.create(mode: "lite", source_video_url: "https://x/v.mp4", source_audio_url: "https://x/a.mp3")
-      end.to raise_error(RunApi::Core::ValidationError, /model must be one of: volcengine-lip-sync/)
-    end
   end
 
   describe "#get" do

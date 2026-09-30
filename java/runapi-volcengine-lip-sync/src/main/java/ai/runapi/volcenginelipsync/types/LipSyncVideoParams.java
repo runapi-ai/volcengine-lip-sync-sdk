@@ -19,9 +19,9 @@ public final class LipSyncVideoParams {
 
   private LipSyncVideoParams(Builder builder) {
     this.model = builder.model;
-    this.mode = VolcenginelipsyncParamUtils.requireNonBlank(builder.mode, "mode");
-    this.sourceVideoUrl = VolcenginelipsyncParamUtils.requireNonBlank(builder.sourceVideoUrl, "sourceVideoUrl");
-    this.sourceAudioUrl = VolcenginelipsyncParamUtils.requireNonBlank(builder.sourceAudioUrl, "sourceAudioUrl");
+    this.mode = builder.mode;
+    this.sourceVideoUrl = builder.sourceVideoUrl;
+    this.sourceAudioUrl = builder.sourceAudioUrl;
     this.callbackUrl = builder.callbackUrl;
     this.enableVocalSeparation = builder.enableVocalSeparation;
     this.enableSceneDetection = builder.enableSceneDetection;
@@ -81,32 +81,32 @@ public final class LipSyncVideoParams {
 
     /** Sets the model slug using a string value. */
     public Builder model(String value) {
-      this.model = VolcenginelipsyncParamUtils.requireNonBlankTrim(value, "model");
+      this.model = value;
       return this;
     }
 
 
     /** Sets the mode. */
     public Builder mode(String value) {
-      this.mode = VolcenginelipsyncParamUtils.requireNonBlank(value, "mode");
+      this.mode = value;
       return this;
     }
 
     /** Sets the source video URL. */
     public Builder sourceVideoUrl(String value) {
-      this.sourceVideoUrl = VolcenginelipsyncParamUtils.requireNonBlank(value, "sourceVideoUrl");
+      this.sourceVideoUrl = value;
       return this;
     }
 
     /** Sets the source audio URL. */
     public Builder sourceAudioUrl(String value) {
-      this.sourceAudioUrl = VolcenginelipsyncParamUtils.requireNonBlank(value, "sourceAudioUrl");
+      this.sourceAudioUrl = value;
       return this;
     }
 
     /** Sets the webhook URL for task completion notifications. */
     public Builder callbackUrl(String value) {
-      this.callbackUrl = VolcenginelipsyncParamUtils.requireNonBlank(value, "callbackUrl");
+      this.callbackUrl = value;
       return this;
     }
 

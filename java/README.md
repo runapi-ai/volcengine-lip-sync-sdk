@@ -5,7 +5,7 @@ The Volcengine Lip Sync Java SDK submits lip-sync video tasks and retrieves task
 ## Install
 
 ```kotlin
-implementation("ai.runapi:runapi-volcengine-lip-sync:0.1.1")
+implementation("ai.runapi:runapi-volcengine-lip-sync:0.2.0")
 ```
 
 ## Quick start
